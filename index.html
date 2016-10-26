@@ -236,7 +236,7 @@
                         </div>
                         <ul class="fonttype fll">
                             <li>辅助接口
-                                <div class="trianglelist triangle1"></div>
+                                <div class="trianglelist triangle1" id="triangle1"></div>
                             </li>
                             <li>自助接入API<div class="trianglelist triangle2"></div></li>
                             <li>多种终端支付<div class="trianglelist triangle3"></div></li>
@@ -393,32 +393,43 @@
             });
             //banner4效果
             $(".fonttype li:eq(0)").hover(function () {
-                $('change').stop();
-                $('.triangle1').stop()
-                $('.triangle1').animate({left:"13"},100);
-              //  $('.triangle1').css('display','block');
-                $('.support2').fadeOut('slow');
-                $('.support3').fadeOut('slow');
-                $('.support1').fadeIn('slow');
+                $('.triangle1').stop();
+                $('.support2').stop();
+                $('.support3').stop();
+                $('.support1').stop();
+                $('#triangle1').animate({left:"13"},100);
+                 $('.support2').hide('slow');
+                $('.support3').hide('slow');
+                $('.support1').show('slow');
+
             })
             $(".fonttype li:eq(1)").hover(function () {
-                $('.change').stop()
-                $('.triangle1').stop()
-                $('.triangle1').animate({left:"215"},100);
+                $('.triangle1').stop();
+                $('.support2').stop();
+                $('.support3').stop();
+                $('.support1').stop();
+                $('#triangle1').animate({left:"215"},100);
                 //  $('.triangle1').css('display','block');
-                $('.support1').fadeOut('slow');
-                $('.support3').fadeOut('slow');
-                $('.support2').fadeIn('slow');
+                 $('.support1').hide('slow');
+                $('.support3').hide('slow');
+                $('.support2').show('slow');
             })
             $(".fonttype li:eq(2)").hover(function () {
-                $('.change').stop()
-                $('.triangle1').stop()
-                $('.triangle1').animate({left:"424"},100);
-                //  $('.triangle1').css('display','block');
-                $('.support2').fadeOut('slow');
-                $('.support1').fadeOut('slow');
-                $('.support3').fadeIn('slow');
+                $('.triangle1').stop();
+                $('.support2').stop();
+                $('.support3').stop();
+                $('.support1').stop();
+                $('#triangle1').animate({left:"424"},100);
+                 $('.support2').hide('slow');
+                $('.support1').hide('slow');
+                $('.support3').show('slow');
             })
+            var curIndex = -1;
+            $(".fonttype li").hover(function (e) {
+                if(curIndex > 0) {
+
+                }
+            });
         </script>
     </body>
 </html>
