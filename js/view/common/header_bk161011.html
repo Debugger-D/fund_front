@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="h logo-container">
+        <a href="../">
+            <img class="logo" src="../img/logo_b.png" />
+        </a>
+        <span class="logo-text">
+        {{if title}}
+            {{title}}
+        {{else}}
+            我的泰然支付
+        {{/if}}
+        </span>
+    </div> 
+    <div class="h menu"> 
+        <a href="../personal/i.html" class="m m1 active">我的财富</a>
+        <a href="../personal/trade.html" class="m m2">资金明细</a>
+        <a href="../personal/account.html" class="m m3">账户管理</a>
+    </div>
+    <div class="h2 user">
+    	{{if isLogined}}
+        你好，<a href="javascript:;" class="username" >{{userInfo.phone}}</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="javascript:;" class="logout" >退出</a>
+        {{else}}
+        <a href="../login.html" class="login" >登录</a>
+        {{/if}}
+    </div>
+</div>

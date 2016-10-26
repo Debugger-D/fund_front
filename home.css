@@ -1,0 +1,11 @@
+body {
+  min-width: 1200px !important; }
+  body a {
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -ms-transition: color .2s linear;
+    -o-transition: color .2s linear;
+    transition: color .2s linear;
+    text-decoration: none; }
+
+/*# sourceMappingURL=home.css.map */

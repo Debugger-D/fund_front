@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>账户管理-泰然城</title>
+        <!-- css 动画 -->
+        <link rel="stylesheet" href="../css/animate.css">
+        <!-- ft 图标插件 -->
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <!-- 提示框 插件样式 -->
+        <link rel="stylesheet" href="../css/toastr.min.css">
+        <!-- 主角样式 -->
+        <link rel="stylesheet" href="../css/personal.css">
+</head>
+<body>
+	<div class="header">
+		<div class="top-bar">
+			<div class="center">
+				<div class="left">
+					<!-- 已登录 -->
+					<span>您好，<a href="javascript:;" class="c-27a1e5">183******17</a>&nbsp;欢迎进入泰然城</span>
+					<!-- 未登录 -->
+					<!-- <span><a href="http://passport.trc.com/register" rel="nofollow">注册</a>|<a href="http://passport.trc.com/login?redirectUrl=http%3A%2F%2Fjr.trc.com" rel="nofollow">登录</a></span> -->
+					<span><a class="topbar-download-link" href="http://jr.trc.com/app/appDownload" target="_blank"><i class="icon-mobile">&nbsp;</i>移动APP</a></span>
+				</div>
+				<div class="topbar-nav right">
+					<span><a class="topbar-link" href="http://jr.trc.com">返回金融首页</a></span>
+						<!-- <span><a class="topbar-link" href="http://passport.trc.com/api/logout?redirectUrl=http%3A%2F%2Fjr.trc.com">退出</a></span> -->
+					<span><a class="topbar-qq-link" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4008260035&aty=0&a=0&curl=&ty=1" target="_blank" rel="nofollow"><i class="icon-qq">&nbsp;</i>在线客服</a></span>|
+					<span class="icon-tel"><a href="http://jr.trc.com/help/thNewHelp">帮助中心</a></span>|
+					<span class="icon-tel"><a class="c-f55" href="http://bbs.trc.com">小泰社区</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="center">
+				<div class="mode-i-logo">
+					<a href="javascript:;"><img src="../../static/images/logo.png" title="泰然城-个人中心" alt="泰然城-个人中心" /></a>
+				</div>
+				<div class="mode-i-top-nav">
+					<div class="mode-top-nav-first">
+						<ul class="mode-top-nav-inner">
+							<li class="mode-top-nav-item">
+								<div class="mode-top-nav-txt"><span><a href="javascript:;">我的泰然</a></span></div>
+							</li>
+							<li class="mode-top-nav-item on">
+								<div class="mode-top-nav-txt"><span><a href="javascript:;">我的金融</a></span></div>
+							</li>
+							<li class="mode-top-nav-item">
+								<div class="mode-top-nav-txt"><span><a href="javascript:;">我的公益</a></span></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap main-content container">
+		<div class="left-sildebar">
+			<div class="mode-i-myinfo">
+				<div class="mode-i-myinfo-wrap">
+					<div class="i-myinfo-head">
+						<div class="i-myinfo-head-img">
+							<img src="../../static/images/my-header.jpg" title="我的账户名" alt="我的账户名" />
+						</div>
+						<div class="i-myinfo-relaname">林尸兄</div>
+					</div>
+				</div>
+			</div>
+			<div class="mode-i-acount-tab">
+				<ul>
+					<li><a href="javascript:;">连连账户</a></li>
+					<li class="on"><a href="javascript:;">华兴账户</a></li>
+				</ul>
+			</div>
+			<div class="mode-i-leftnav">
+				<ul>
+					<li>
+						<div><a href="./acount.html">
+								<i class="icon" icon="account">1</i>
+								<span class="nav_txt">我的账户</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+					<li>
+						<div><a href="./fund.html">
+								<i class="icon" icon="capital">2</i>
+								<span class="nav_txt">我的资金</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+					<li>
+						<div><a href="./financing.html">
+								<i class="icon" icon="financing">3</i>
+								<span class="nav_txt">我的理财</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+					<li class="on">
+						<div><a href="./manage.html">
+								<i class="icon" icon="manage">7</i>
+								<span class="nav_txt">账户管理</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+					<li>
+						<div><a href="./loan.html">
+								<i class="icon" icon="loan">8</i>
+								<span class="nav_txt">借款管理</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="horizontal"></div>
+			<div class="mode-i-leftnav ">
+				<ul>
+					<li>
+						<div><a href="javascript:;">
+								<i class="icon" icon="ticon">4</i>
+								<span class="nav_txt">我的T币</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+					<li>
+						<div><a href="javascript:;">
+								<i class="icon" icon="bonus">5</i>
+								<span class="nav_txt">团队分红</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+					<li>
+						<div><a href="javascript:;">
+								<i class="icon" icon="invite">6</i>
+								<span class="nav_txt">好友邀请</span>
+								<span class="arrow"></span>
+							</a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="page-wrap">
+			<div class="page-content">
+				<div class="full-tips"><span class="">为保障安全，请完成账户实名认证</span></div>
+				<div class="relaname-inner authenticated">
+					<!-- 实名认证表单 -->
+					<form class="relaname-unauthorized-form" action="" method="POST">
+						<div class="form_field">
+							<label class="form_field_label" for="relaname"><i icon="user"></i>真实姓名</label>
+							<div class="form_field_input">
+								<input type="text" name="" id="relaname" value="" />
+							</div>
+						</div>
+						<div class="form_field">
+							<label class="form_field_label" for="cardId"><i icon="card"></i>身份证号</label>
+							<div class="form_field_input">
+								<input type="text" name="" id="cardId" value=""  />
+							</div>
+						</div>
+						<div class="form_field">
+							<label class="form_field_label" for="email"><i icon="email"></i>电子邮箱</label>
+							<div class="form_field_input">
+								<input type="text" name="" value="" />
+							</div>
+						</div>
+						<div class="form_field">
+							<div class="form_field_btn">
+								<button class="blue-long-btn" type="submit">实名认证</button>
+							</div>
+						</div>
+					</form>
+
+					<!-- 已实名认证显示 -->
+					<div class="relaname-authenticated-inner">
+						<div class="form_field">
+							<label class="form_field_label"><i icon="user"></i>真实姓名</label>
+							<div class="form_field_input">
+								<span class="c-86 f-s-14">老徐家</span>
+							</div>
+						</div>
+						<div class="form_field">
+							<label class="form_field_label"><i icon="card"></i>身份证号</label>
+							<div class="form_field_input">
+								<span  class="c-86 f-s-14">335603199209126538</span>
+							</div>
+						</div>
+						<div class="form_field">
+							<label class="form_field_label"><i icon="email"></i>电子邮箱</label>
+							<div class="form_field_input">
+								<span  class="c-86 f-s-14">3654558@qq.com</span>
+							</div>
+						</div>
+						<!-- 实名认证未通过显示 -->
+						<div class="relaname-other-tip" style="display: none;">
+							<span class="f-s-14 f-w-7 c-orage">您的华兴账户开户申请正在处理中…</span>　
+							<span class="f-s-14 c-52">如果华兴e账户显示已开通，请联系客服<i class="c-blue">400-669-0685</i></span>
+						</div>
+						<!-- 已实名认证，已开通存管显示 -->
+						<div class="relaname-other-tip" style="display:none;">
+							<div class="form_field">
+								<label class="form_field_label nowrap"><i icon="pass"></i>您已授权泰然金融自动电子签名</label>
+							</div>
+							<a class="blue-long-btn" href="javascript:;">立即投资</a>　<span class="f-s-14 f-w-7 c-orage">您已开通华兴银行存管啦！</span>
+						</div>
+						<!-- 已实名认证，未开通存管显示 -->
+						<div class="relaname-other-tip">
+							<a class="blue-long-btn" href="javascript:;">注册银行存管账户</a>　<span class="f-s-14 f-w-7 c-orage">资金托管升级为银行存管啦！快来注册银行资金帐户</span>
+						</div>
+					</div>
+				</div>
+				<div class="change-password-warp">
+					<!-- 修改登录密码 -->
+					<div class="change-password-title"><label class="change-password-maintitle"><i icon="pwd"></i>登录密码</label>　<span class="change-password-subtitle">登录密码安全级别适中，建议定期修改</span><a class="right f-s-14 c-blue" href="javascript:;">修改</a></div>
+					<div class="change-password-form" style="display:none;">
+						<form action="" method="POST">
+							<div class="form_field">
+								<label class="form_field_label">登录密码</label>
+								<div class="form_field_input"><input type="password" name="password" /></div>
+							</div>
+							<div class="form_field">
+								<label class="form_field_label">新登录密码</label>
+								<div class="form_field_input"><input type="password" name="new_password" /></div>
+							</div>
+							<div class="form_field">
+								<label class="form_field_label">确认新登录密码</label>
+								<div class="form_field_input"><input type="password" name="repeat_password" /></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="foot-wrap center">
+			<div class="foot-inner left">
+				<div class="site-nav">
+					<ul>
+						<li><a href="javascript:;">新人理财</a></li>
+						<li><a href="javascript:;">网站地图</a></li>
+						<li><a href="javascript:;">帮助中心</a></li>
+						<li><a href="javascript:;">在线理财</a></li>
+						<li><a href="javascript:;">手机理财</a></li>
+						<li><a href="javascript:;">关于泰和</a></li>
+						<li><a href="javascript:;">集团介绍</a></li>
+						<li><a href="javascript:;">友情链接</a></li>
+						<li><a href="javascript:;">联系我们</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>Copyright © 2014-2016 泰和网360TAIHE.COM　版权所有　|　让信任创造价值</p>
+				</div>
+			</div>
+			<div class="foot-inner right">
+				<div class="other">
+					<div class="code-inner app-code">
+						<div class="code-img"><img src="../../static/images/code.jpg" alt="手机扫码下载APP" title="手机扫码下载APP"></div>
+						<p><span>泰和网APP</span></p>
+					</div>
+					<div class="code-inner wechat-code">
+						<div class="code-img"><img src="../../static/images/code.jpg" alt="微信扫码关注" title="微信扫码关注"></div>
+						<p><span>关注微信</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="foot-inner right">
+				<div class="contact-us">
+					<div class="contact-us-tel"><i class="foot-icon foot-icon-tel">tel</i>联系我们(09:00 - 21:00)<br /><span class="f-s-16">400-669-0685</span></div>
+					<div class="contact-us-qq"><i class="foot-icon foot-icon-qq">qq</i>在线客服</div>
+					<div class="contact-us-email"><i class="foot-icon foot-icon-email">email</i>客服邮箱</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../static/assembly/jquery-v1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../../static/assembly/layer-v2.3/layer.js"></script>	
+</body>
+</html>

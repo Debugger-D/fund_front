@@ -1,0 +1,28 @@
+@charset "utf-8";
+.table {
+    width: 100%;
+    color: #555;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: $size-font-1;
+    color: $color-font;
+    border: 1px solid $color-table-border;
+    border-top: 0px;
+    background-color: #fff;
+    thead  {
+        background: #fff;
+        th{
+            padding: 8px 0px;
+            text-align: left;
+            font-weight: normal;
+        }
+    }
+    tr{
+        border-bottom: 1px solid $color-table-border;
+        td {
+            text-align: left;
+            padding: 20px 0px;
+        }
+    }
+}
+

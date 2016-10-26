@@ -1,0 +1,25 @@
+<table class="table textcenter">
+    <thead>
+    <tr>
+        <th width="60" class="text-center">序号</th>
+        <th width="300">卡密</th>
+        <th width="100">总额</th>
+        <th width="180">有效期</th>
+        <th width="180">赠送时间</th>
+        <th width="300">被赠送者</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{list}}
+    {{each list}}
+    <tr>
+        <td>{{$index+1}}</td>
+        <td>{{$value.cardId}}</td>
+        <td>{{$value.goods_price}}</td>
+        <td>{{$value.tradeTime | dateFormat:'yyyy.MM.dd hh:mm:ss'}}</td>
+        <td>{{$value.ceateDate | dateFormat:'yyyy.MM.dd hh:mm:ss'}}</td>
+        <td>{{$value.toUserId}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,73 @@
+#footer-icon {
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: $color-body-bg;
+}
+
+#footer {
+    text-align: center;
+    height: 73px;
+    border-top: 1px solid #c5c5c5;
+    padding: 20px 0px;
+    p {
+        font-size: $size-font-1;
+        color: $color-font-light;
+    }
+}
+
+#footer-container {
+    z-index: 99;
+    position: relative;
+    top: -1px;
+}
+
+#footer-trc {
+    background-color: #3B3D49;
+    padding-top: 30px;
+    min-height: 140px;
+    .cat {        
+        float: left;
+        a {
+            color: #B2B3B8;
+            font-size: $size-font-1;
+            height: 15px;
+            line-height: 15px;
+            padding: 0px 10px;
+            border-right: 1px solid #B2B3B8;
+        }
+
+        .addr {
+            margin-top: 20px;
+            color: #B2B3B8;
+        }
+    }
+
+    .contact {
+        float: left;
+        margin-left: 100px;
+        color: #b2b4b9;
+        font-size: $size-font-1;
+        .t {
+            display: block;
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin: 0px 10px;
+        }
+        img {
+            display: block;
+            float: left;
+        }
+    }
+
+    .qrcode {
+        float: right;
+        .qr {
+            float: right;
+            color: #b3b5ba;
+            font-size: $size-font-1;
+            margin-left: 30px;
+        }
+    }
+    
+}

@@ -1,0 +1,24 @@
+<table class="table textcenter">
+    <thead>
+    <tr>
+        <th width="60" class="text-center">序号</th>
+        <th width="300">卡密</th>
+        <th width="100">总额</th>
+        <th width="100">余额</th>
+        <th width="180">有效期</th>
+        <th width="180">状态</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{each dataList}}
+    <tr>
+        <td>{{$index+1}}</td>
+        <td>{{$value.cardCode}}</td>
+        <td>{{$value.amount}}</td>
+        <td>{{$value.balance}}</td>
+        <td>{{$value.validDate | dateFormat:'yyyy.MM.dd hh:mm:ss'}}</td>
+        <td>{{$value.status}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table> 

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: $size-column-width * $i;    // 在 variables.scss
+        float: left;
+    }
+}
+
+$column-perc-width: 100% / 12;
+@for $i from 1 through 12 {
+    .col-perc-#{$i} {
+        width: $column-perc-width * $i;
+        float: left;
+    }
+}

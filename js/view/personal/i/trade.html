@@ -1,0 +1,47 @@
+<div class="header">
+    <div class="tab">
+    近期交易记录
+    </div>
+     <a href="./trade.html" class="m">查看所有交易记录</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th width="110" class="text-center">类别</th>
+            <th width="160" style="padding-left: 30px;">创建时间</th>
+            <th width="190">接收方</th>
+            <th width="340">付款渠道</th>
+            <th width="185">金额</th>
+            <th width="75">状态</th>
+            <th class="text-center">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+         {{each info}}
+            <tr>
+                <td class="text-center"><span class="iconn {{$value.tradeType | tradeTypeIcon}}"></span></td>
+                <td style="padding-left: 30px;">{{$value.createDate | dateFormat:'yyyy.MM.dd hh:mm'}}</td>
+                <td>{{$value.appName}}</td>
+                <td>{{$value.channelId | channelID}}&nbsp;{{$value.bankName}}&nbsp;{{$value.bankCardNo | bankCardNo}}</td>
+                <td>{{$value.amount}}</td>
+                <td>{{$value.billStatus | billStatus}}</td>
+                <td class="text-center"> 
+                    <a href="./detail.html?id={{$value.serial}}&tradeType={{$value.tradeType}}">
+                        查看详情
+                    </a>
+                </td>
+            </tr>
+         {{/each}}
+
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2">
+               <a href="./trade.html" class="more">查看所有交易记录</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

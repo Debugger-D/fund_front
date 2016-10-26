@@ -1,0 +1,58 @@
+<div id="account-set-pswd">
+    <div id="account-set-pswd-cont" class="page-wrapper">
+        <div class="title">设置支付密码</div>
+        <div class="content">
+            <div class="form-group form-group-1">
+                <div class="ele-group">
+                    <div class="lab">手机号码</div>
+                    <div class="group">
+                        {{if phone}}
+                        {{phone}}
+                        {{/if}}
+                    </div>
+                </div>
+                <form  id="form-1">
+                    <div class="ele-group">
+                        <div class="lab">密保问题 </div>
+                        <div class="group">
+                            <select class="question" style="height: 36px;padding-left: 10px;width: 308px;">
+                                <option value="你父亲的名字？">你父亲的名字？</option>
+                                <option value="你母亲的名字？">你母亲的名字？</option>
+                                <option value="你的家乡在哪里？">你的家乡在哪里？</option>
+                                <option value="你的第一辆车是什么牌子？">你的第一辆车是什么牌子？</option>
+                                <option value="你的第一辆车是什么牌子？">你的第一部手机是什么牌子？</option>
+                                <option value="你在哪个高中毕业？">你在哪个高中毕业？</option>
+                                <option value="初恋的名字？">初恋的名字？</option>
+                                <option value="你的第一个领导是谁？">你的第一个领导是谁？</option>
+                                <option value="你的生日是什么时候？">你的生日是什么时候？</option>
+                                <option value="你是什么星座？">你是什么星座？</option>
+                                <option value="你最爱吃的水果是什么？">你最爱吃的水果是什么？</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ele-group">
+                        <div class="lab">密保答案 </div>
+                        <div class="group">
+                            <input type="text"  class="answer"  />
+                            <div class="err err-msg">请填写密保答案</div>
+                        </div>
+                    </div>
+                    <div class="ele-group">
+                        <div class="lab">验证码 </div>
+                        <div class="group">
+                            <input type="text" class="smscode" />
+                            <a href="#" class="btn" id="sendSmsCode">发送验证码</a><br/>
+                            <div class="err err-msg">请填写验证码</div>
+                            <div class="info-msg">已向您发送验证码，验证码5分钟内有效。
+                            </div>
+                            <!--	<a href="#" class="btn" id="form-next-1">下一步</a>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="form-group form-group-3">
+                支付密码修改成功，请牢记！
+            </div>
+        </div>
+    </div>
+</div>

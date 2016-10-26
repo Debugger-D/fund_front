@@ -1,0 +1,28 @@
+<div style="display: inline-block;">
+	<div class="c1">
+		<div class="amount">
+			{{if totalAmount}}
+			<div class="price">{{totalAmount}}</div> 
+			{{else}}
+			<div class="price">0.00</div>
+			{{/if}}
+			<div class="txt">资金总余额（元）</div>
+		</div>
+		<div class="c1-right">
+			<a href="./recharge.html" class="recharge">充值</a><br/> 
+			<a href="#" class="recharge recharge2">提现</a>
+		</div>
+	</div>
+	<div class="c2">
+		<table>
+			<tr>
+				<td class="lab">泰然城账户余额（元）</td>
+				<td class="val">{{amountShop}}</td>
+			</tr>
+			<tr>
+				<td class="lab">E 卡（元）</td>
+				<td class="val">{{amountEcard}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th width="110" class="text-center">类别</th>
+            <th width="160" style="padding-left: 30px;">创建时间</th>
+            <th width="350">资金流水号</th>
+            <!-- <th width="340">付款渠道</th> -->
+            <th width="185">交易金额</th>
+            <th width="185">交易后总金额</th>
+        </tr>
+    </thead> 
+    <tbody>
+
+        {{if info.length > 0}}
+            {{each info}} 
+
+            <tr>
+                <td class="text-center"><span class="iconn {{$value.tradeType | tradeTypeIcon}}"></span></td>
+                <td style="padding-left: 30px;">{{$value.createDate | dateFormat:'yyyy.MM.dd hh:mm'}}</td>
+                <td>{{$value.serial}}</td>
+                <!-- <td>{{$value.channelId | channelID}}&nbsp;{{$value.bankName}}&nbsp;{{$value.bankCardNo | bankCardNo}}</td> -->
+                <td>{{$value.amount}}</td>
+                <td>{{$value.totalAmountAfter}}</td>
+            </tr> 
+        {{/each}}
+        {{else}}
+            <tr>
+              <td class="text-center" colspan="5" style="height: 400px;line-height: 400px;">暂无数据</td>
+            </tr>
+    {{/if}} 
+    </tbody>
+</table>
+ 

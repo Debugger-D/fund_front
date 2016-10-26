@@ -1,0 +1,16 @@
+#detail-page {
+	.title {
+	color: red;
+		.r {
+			color: $color-link-light;
+			font-size: $size-font-2;
+			float: right;
+			margin-right: 45px;
+			font-weight: normal;
+		}
+	}
+	.content {
+		border: 1px solid $color-table-border;
+		border-top: 0px;
+	} 
+}

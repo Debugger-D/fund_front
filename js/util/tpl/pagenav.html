@@ -1,0 +1,70 @@
+<%
+    var pageData = pageData ? pageData : {};
+    var totalData = pageData.totalData ? pageData.totalData : -1;
+    var totalPage = pageData.totalPage ? pageData.totalPage : 1;
+    var pageSize = pageData.pageSize ? pageData.pageSize : 10;
+    var pageIndex = pageData.pageIndex ? pageData.pageIndex : 1;
+
+    var first = 1;
+    var last = totalPage;
+    var prev = (pageIndex - 1) >= 1 ? (pageIndex-1) :　1;
+    var next = (pageIndex + 1) <= totalPage ? (pageIndex + 1) : totalPage;
+%>
+<div class="ljq-pagenav">
+    <%
+    if (totalData > 0) {
+    %>
+        <ul>
+            <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-text-link" data-page-num="<%= first %>">首页</a></li>
+            <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-text-link" data-page-num="<%= prev %>">上一页</a></li>
+            <%
+                if( totalPage <= 10){
+                    for(var i = 1; i <= totalPage; i++) {
+                        var active = (i == pageIndex) ? 'active' : '';
+            %>
+                <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-pagenum <%= active %>" data-page-num="<%= i %>"><%= i %></a></li>
+            <%
+                    }
+                }else if( totalPage > 10){
+                    if(pageIndex <= 5){
+                        for(var i = 1; i <= 10; i++) {
+                            var active = (i == pageIndex) ? 'active' : '';
+            %>
+                <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-pagenum <%= active %>" data-page-num="<%= i %>"><%= i %></a></li>
+            <%
+                        }
+                    }else if( pageIndex <= totalPage-5 && pageIndex > 5){
+                        for(var i = pageIndex-4; i <= pageIndex+5; i++) {
+                            var active = (i == pageIndex) ? 'active' : '';
+            %>
+                <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-pagenum <%= active %>" data-page-num="<%= i %>"><%= i %></a></li>
+            <%
+                        }
+                    }else if(pageIndex > totalPage-5 && pageIndex > 5){
+                        for(var i = totalPage-9; i <= totalPage; i++) {
+                            var active = (i == pageIndex) ? 'active' : '';
+            %>
+                <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-pagenum <%= active %>" data-page-num="<%= i %>"><%= i %></a></li>
+            <%
+                        }
+                    }
+                }            
+            %>
+            <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-text-link" data-page-num="<%= next %>">下一页</a></li>
+            <li><a href="javascript:;" class="ljq-pagenav-link ljq-pagenav-text-link" data-page-num="<%= last %>">末页</a></li>
+            <li>
+                <div class="ljq-pagenav-c">
+                    第
+                    <input type="text" value="<%= pageIndex %>" class="ljq-pagenav-input ljq-pagenav-input-pageindex" />
+                    页
+                </div>
+             </li>
+             <li><a href="javascript:;" class="btn btn-green ljq-pagenav-go ljq-pagenav-text-link">跳转</a></li>
+             <li class="ljq-pagenav-total">
+                    共<span><%= totalPage %></span>页&nbsp;<span><%= totalData %></span>条
+             </li>
+        </ul>
+    <%
+    }
+    %>
+</div>

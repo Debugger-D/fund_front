@@ -1,0 +1,74 @@
+<div id="detail-page" class="page-wrapper">
+    <div class="title">我的账单<a href="./trade.html" class="r">我的账单</a></div>
+    <div class="content">
+        <div class="pay-main">
+            <h4 class="title">{{typeName[info.tradeType]}}{{statusName[info.billStatus]}}</h4>
+            {{if info.tradeType!='RECHARGE'}}
+            <p class="pay-main-detail">收款方 : {{info.receiveName}}</p>
+            {{/if}}
+            <p class="pay-main-detail pay-main-flow">流水号 : {{info.serial}}</p>
+            <p class="pay-main-time">时间:{{info.date |dateFormat:'yyyy-MM-dd hh:mm:ss'}}<span>单位 : 元</span></p>
+            {{if !info.deductAmount}}
+            <table class="table pay-table">
+                <thead>
+                <tr>
+                    <th>订单金额</th>
+                    <th> 实付金额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="order-money">{{info.amount}}</td>
+                    <td class="pay-money">{{info.amount}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    {{if info.channelId == 'ALIPAY' || info.channelId == 'WEIXIN'}}
+                    <td class="pay-detail"><img src={{channalType[info.channelId]}} alt="" class="pay-main-channel" width="20" height="20">{{info.bankCardNo}}<span class="pay-detail-amount">{{info.amount}}</span></td>
+                    {{else}}
+                    <td class="pay-detail"><img src={{info.bankLogo}} alt="" class="pay-main-channel" width="30" height="30">{{info.bankCardNo}}<span class="pay-detail-amount">{{info.amount}}</span></td>
+                    {{/if}}
+                </tr>
+                </tbody>
+            </table>
+            {{else}}
+            <table class="table pay-table">
+                <thead>
+                <tr>
+                    <th>订单金额</th>
+                    <th>抵扣方式</th>
+                    <th>抵扣金额</th>
+                    <th>实付金额</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{each info.deductAmount}}
+                <tr>
+                    {{if $index==0}}
+                    <td class="order-money">{{info.amount}}</td>
+                    {{else}}
+                    <td class="order-money"></td>
+                    {{/if}}
+                    <td>{{$value.method}}</td>
+                    <td>{{$value.amount}}</td>
+                    {{if $value.channelId =='ECARD'}}
+                        <td class="pay-money">{{$value.amount}}</td>
+                    {{else}}
+                        <td class="pay-detail">
+                            {{if $value.channelId == 'ALIPAY' || $value.channelId == 'WEIXIN'}}
+                                <img src={{channalType[$value.channelId]}} alt="" class="pay-main-channel" width="20" height="20">
+                            {{else}}
+                                <img src={{$value.bankLogo}} alt="" class="pay-main-channel" width="30" height="30">
+                            {{/if}}
+                            {{$value.bankCardNo}}
+                            <span class="pay-detail-amount" style="color: #333">{{$value.amount}}</span>
+                        </td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+            {{/if}}
+        </div>
+    </div>
+</div>

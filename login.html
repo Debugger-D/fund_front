@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/framework/jquery-1.11.0.min.js"></script>
+    <script src="js/framework/jquery.cookie.js"></script>
+</head>
+<body>
+用户名:<input type="text" id="phone"><br/>
+密码:<input type="text" id="psd">
+<div id="err-msg"></div>
+<button id="login">登录</button>
+<script>
+    $("#login").click(function () {
+        //var phone = "18012343234";
+        // var phone = "18667176323";
+        // var phone = "13840918032";
+        // var psd = "123456";
+        var phone = $("#phone").val();
+        var psd = $("#psd").val();
+        $.ajax({
+            type:"POST",
+            url:"/account/user/login",
+            data:"phone="+phone+"&password="+psd,
+            success:function (res) {
+                $.cookie('FUND_USR_PHONE', res.phone);
+                $.cookie('FUND_USR_ID', res.userId);
+                window.location.href = './personal/i.html'
+            },
+            error: function (err) {
+                $("#err-msg").html(err.responseText);
+            }
+        })
+    })
+</script>
+</body>
+</html>

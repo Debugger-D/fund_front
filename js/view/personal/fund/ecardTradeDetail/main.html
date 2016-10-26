@@ -1,0 +1,35 @@
+<div id="detail-page" class="page-wrapper">
+    <div class="title">E卡消费详情<a href="./ecard_trade.html" class="r">E卡明细</a></div>
+    <div class="content">
+        {{if info}}
+        <div class="pay-main">
+            <p class="pay-main-time">时间:{{info.date |dateFormat:'yyyy-MM-dd hh:mm:ss'}}<span>单位 : 元</span></p>
+            <table class="table pay-table">
+                <thead>
+                <tr>
+                    <th>订单金额</th>
+                    <th> 实付金额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="order-money">{{info.amount}}</td>
+                    <td class="pay-money">{{info.amount}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    {{if info.channelId == 'ALIPAY' || info.channelId == 'WEIXIN'}}
+                    <td class="pay-detail"><img src={{channalType[info.channelId]}} alt="" class="pay-main-channel" width="20" height="20">{{info.bankCardNo}}<span class="pay-detail-amount">{{info.amount}}</span></td>
+                    {{else}}
+                    <td class="pay-detail"><img src={{info.bankLogo}} alt="" class="pay-main-channel" width="30" height="30">{{info.bankCardNo}}<span class="pay-detail-amount">{{info.amount}}</span></td>
+                    {{/if}}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        {{else}}
+        <p>暂无数据</p>
+        {{/if}} 
+    </div>
+</div>
+ 

@@ -1,0 +1,35 @@
+@mixin myiconBefore($img, $width:20, $height: 20, $top:0, $left:0) {
+	content: ' ';
+	display: block;
+	position: absolute;
+	width: #{$width}px;
+	height: #{$height}px;
+	background-repeat: no-repeat;
+	background-image: url('#{$img}');
+	top: #{$top}px;
+	left: #{$left}px;
+}
+
+// .myicon-refund {
+// 	position: relative;
+// 	&:before {
+// 		@include myiconBefore('../img/util/tui.png', 25, 25);
+// 	}	
+// }
+
+@mixin myicon($name, $img, $width:20, $height: 20, $top:0, $left:0) {
+	.myicon-#{$name} {
+		position: relative;
+		&:before {
+			@include myiconBefore($img, $width, $height, $top, $left);
+		}
+	}
+	
+}
+
+@include myicon('refund', '../img/util/tui.png', 25, 25);
+@include myicon('consume', '../img/util/gou.png', 25, 25);
+@include myicon('recharge', '../img/util/chong.png', 25, 25);
+@include myicon('alipay', '../img/util/alipay.png', 30, 30);
+@include myicon('weixin', '../img/util/weixin.png', 30, 30);
+@include myicon('lianlian', '../img/util/lianlian.png', 57, 32);

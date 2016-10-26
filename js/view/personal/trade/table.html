@@ -1,0 +1,52 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th width="110" class="text-center">类别</th>
+            <th width="160" style="padding-left: 30px;">创建时间</th>
+            <th width="190">接收方</th>
+            <th width="340">付款渠道</th>
+            <th width="150">金额</th>
+            <th width="75">状态</th> 
+            <th width="160" class="text-center">操作</th>
+        </tr>
+    </thead> 
+    <tbody> 
+        {{if info.length > 0}}
+            {{each info}}  
+                <tr>
+                    <td class="text-center"><span class="iconn {{$value.tradeType | tradeTypeIcon}}"></span></td>
+                    <td style="padding-left: 30px;">{{$value.createDate | dateFormat:'yyyy.MM.dd hh:mm'}}</td>
+                    <td>{{$value.appName}}</td>
+                    <td>{{$value.channelId | channelID}}&nbsp;{{$value.bankName}}&nbsp;{{$value.bankCardNo | bankCardNo}}</td>
+                    <td>{{$value.amount}}</td>
+                    <td>{{$value.billStatus | billStatus}}</td>
+                    <td class="text-center detail">
+                        {{if $value.billStatus == 'DOING' }}
+                            <a href="javascript:;"> 
+                            立即付款
+                            <i class="icon-sort-down"></i>
+                            </a>
+                            <div class="float-op dpno">
+                                <a href="recharge.html">立即付款</a> 
+                                <a href="./detail.html?id={{$value.serial}}&tradeType={{$value.tradeType}}">查看详情</a>
+                            </div>
+                        {{else}}
+                            <a href="javascript:;">
+                            查看详情
+                            <i class="icon-sort-down"></i>
+                            </a>
+                            <div class="float-op dpno">
+                                <a href="./detail.html?id={{$value.serial}}&tradeType={{$value.tradeType}}">查看详情</a>
+                            </div>
+                        {{/if}}
+                    </td>
+                </tr> 
+             {{/each}}
+         {{else}}
+            <tr>
+              <td class="text-center" colspan="7" style="height: 400px;line-height: 400px;">暂无数据</td>
+            </tr>
+        {{/if}} 
+    </tbody>
+</table>
+

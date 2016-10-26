@@ -1,0 +1,53 @@
+<table class="table textcenter">
+    <thead>
+        <tr>
+            <th width="60" class="text-center">序号</th>
+            <th width="300">卡密</th>
+            <th width="100">购买金额</th>
+            <th width="100">总额</th>
+            <th width="180">有效期</th>
+            <th width="180">购买时间</th>
+            <th width="100" class="text-center">状态</th>
+            <th width="130" class="text-center">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{if dataList.length > 0}}
+         {{each dataList}}
+            <tr>
+
+               <td>{{$value.amount}}</td>
+               <td>{{$value.cardCode}}</td>
+               <td>{{$value.amount}}</td>
+               <td>{{$value.amount}}</td>
+               <td>{{$value.validDate | dateFormat:'yyyy.MM.dd hh:mm'}}</td>
+               <td>{{$value.buyDate | dateFormat:'yyyy.MM.dd hh:mm'}}</td>
+              {{if $value.useStatus == 'NOOPEN'}}
+                <td>未刮开</td>
+              {{else if $value.useStatus == 'OPEN'}}
+                <td>已刮开</td>
+              {{else if $value.useStatus == 'BINDED'}}
+                <td>已绑定</td>
+              {{else if $value.useStatus == 'SENDED'}}
+                <td>已赠送</td>
+              {{else if $value.useStatus == 'INVALID'}}
+                <td>已失效</td>
+              {{else}}
+                  <td>-------------</td>
+              {{/if}} 
+               {{if $value.useStatus == 'NOOPEN'}}
+                  <td><a href="javascript:;" class="guakai" data-id="{{$value.id}}" data-cardcode="{{$value.cardCode}}" style="margin-right: 10px;">刮开</a><a href="javascript:;" class="zengsong" data-id="{{$value.id}}" data-cardcode="{{$value.cardCode}}">赠送</a></td>
+              {{else if $value.useStatus == 'OPEN'}}
+                  <td><a href="javascript:;" class="bangding" data-id="{{$value.id}}" data-cardcode="{{$value.cardCode}}">绑定</a></td>
+              {{else}}
+                  <td>-------------</td>
+              {{/if}}   
+            </tr>
+         {{/each}}
+        {{else}}
+            <tr>
+              <td class="text-center" colspan="8" style="height: 400px;line-height: 400px;">暂无数据</td>
+            </tr>
+        {{/if}} 
+    </tbody>
+</table>

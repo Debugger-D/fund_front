@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+// =======================================
+// $color-*
+// 网站的基础色调
+$color-header-bg: #fff !default;    // 头部背景颜色
+$color-body-bg: #ecedf2 !default;    // 页面内容背景颜色
+$color-footer-bg: #fff !default;    // 底部背景颜色
+
+// $color-link-*
+// 链接
+$color-link: #00aaee !default;    // 默认连接颜色
+$color-link-dark: #0088cc !default;    // 链接深色
+$color-link-light: #67c1f2 !default;    //浅色
+$color-link-header: #4d4d4d !default;    //头部链接默认颜色
+$color-link-header-hover: #e66e1e !default; //头部链接 hover 颜色
+$color-link-active: #e66e1e !default; // 激活颜色
+ 
+// $color-font-* 
+// 默认字体
+$color-font: #4d4d4d !default;    //默认字体颜色
+$color-font-dark-2: #000 !default;    // 黑色
+$color-font-dark: #333 !default;    // 深色
+$color-font-light: #666 !default;    // 亮色
+$color-font-light-2: #999 !default;    // 浅色
+$color-font-light-3: #9a9a9a !default;    // 浅色2
+$color-font-placeh: #ddd !default;    // 输入框占位符
+$color-font-err: #ff5d5b !default;    // 提示错误字体
+$color-font-orange: #e66e1e !default;    // 橘色，价格, 链接
+
+$color-tab-head: #f5f5f5 !default;    //头部
+// $color-table-*
+// 表格
+$color-table-border: #e1e1e1 !default;    // 边框
+$color-table-td-gray: #fbfbfb !default;    // 灰色单元格
+  
+//===============================================
+// $size-*
+// 基础大小
+
+// $size-font-*
+// 字体大小
+$size-font-1: 12px !default;
+$size-font-2: 14px !default;
+$size-font-3: 16px !default;
+$size-font-4: 18px !default;
+
+// $size-grid
+$size-column-width: 1200px !default;    //用于栅格系统，默认容器宽度
+
+// default font family
+$font-family: "Hiragino Sans GB", "Microsoft YaHei", 黑体, Helvetica, Arial, Tahoma, sans-serif !default;

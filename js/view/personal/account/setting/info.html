@@ -1,0 +1,44 @@
+<div class="form-group">
+	<div class="ele-group">
+		<div class="lab">
+			<img class="i" src="../img/personal/icon_account_person.png" />真实姓名 {{result}}
+		</div>
+		<div class="group">
+			{{if realName}}
+				{{realName}}
+			{{else}}
+				<a href="#">我要实名认证</a>
+			{{/if}}
+		</div>
+	</div>
+	<div class="ele-group">
+		<div class="lab">
+			<img class="i" src="../img/personal/icon_account_idcard.png" />身份证号
+		</div>
+		<div class="group">
+			{{idCardNo}}
+		</div>
+	</div>
+	<div class="ele-group">
+		<div class="lab">
+			<img class="i" src="../img/personal/icon_account_phone.png" />手机
+		</div>
+		<div class="group">
+			{{phone}}
+		</div>
+	</div>
+	<div class="ele-group">
+		<div class="lab">
+			<img class="i" src="../img/personal/icon_account_pass.png" />支付密码
+		</div>
+		<div class="group">
+			{{if haveAccount == true}}
+				在账户资金变动，修改账户信息时需要输入的密码
+				<a href="./password.html">修改支付密码</a>
+				<a href="./question.html">修改密保</a>
+			{{else}}
+				<a href="./account_setpswd.html">设置支付密码</a>
+			{{/if}} 
+		</div>
+	</div>
+</div>

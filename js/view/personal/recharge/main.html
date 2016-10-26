@@ -1,0 +1,39 @@
+<div id="recharge-page" class="page-wrapper">
+	<div class="title">
+		充值到账户余额 <div id="recharge-balance-div">| 余额 :
+		<span id="recharge-balance">
+			{{if balance}} 
+				{{balance}} 
+			{{/if}}
+		</span>
+		元</div>
+	</div> 
+	<div class="content">
+		<div class="amount-div clearfix">
+			<div class="a1 lab">
+				充值金额:
+			</div>
+			<div class="a2">
+				<input class="amount" type="text" name="rechargeAmount" value="" />元<br/>
+				<span class="err amount-msg"></span><br/>
+				<div class="a21"><input type="radio" checked="checked" />充值到泰然商城余额</div>
+				<div class="method clearfix">
+					<a href="#" id="alipay" class="pay">
+						<span class="myi myicon-alipay"></span>
+						<span class="p">支付宝</span>
+					</a>
+					<a href="#" id="weixin" class="pay">
+						<span class="myi myicon-weixin"></span>
+						<span class="p">微信</span>
+					</a>
+					<a href="#" id="lian" class="pay">
+						<span class="myi myicon-lianlian"></span>
+						<span class="p">快捷</span>
+					</a>
+				</div>
+				<div class="msg"></div>
+			</div>
+		</div>
+		
+	</div>
+</div>

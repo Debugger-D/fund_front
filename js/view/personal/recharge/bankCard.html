@@ -1,0 +1,17 @@
+<div id="lianlian-div-2">
+	{{each infos}}
+	<div class="bank-card-list" data-cardno="{{$value.bankCardNo}}">
+		<img height="40" src="{{$value.bankLogo}}" />{{$value.bankName}}  {{$value.bankCardNo | bankCardNo}}
+		<span>单笔限额:2万元</span>
+	</div>
+	{{/each}}
+	<div>
+		<a href="javascript:;" class="add">添加银行卡</a>
+		{{if total < 1}}
+		<span>您还未添加银行卡，请先添加银行卡</span>
+		{{/if}}
+	</div>
+	<div>
+		<button>立即充值</button>
+	</div> 
+</div>

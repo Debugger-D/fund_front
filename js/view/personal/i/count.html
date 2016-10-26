@@ -1,0 +1,24 @@
+<table class="table" >
+    <thead>
+        <tr>
+            <th class="text-center">资金情况</th>
+            <th class="text-center">总成功笔数</th>
+            <th class="text-center">总金额（元）</th>
+        </tr>
+    </thead>
+    <tbody>
+         {{each info}}
+         <tr>
+             <td class="text-center t1">
+                {{$value.name}}
+            </td>
+            <td class="text-center t2">
+                {{$value.count}}
+            </td>
+            <td class="text-center t3">
+                {{$value.total}}
+            </td>
+         </tr>
+         {{/each}}
+    </tbody>
+</table>

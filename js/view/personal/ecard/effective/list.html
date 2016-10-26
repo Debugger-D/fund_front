@@ -1,0 +1,13 @@
+
+{{each dataList}}
+<div class="card-item">
+    <div class="card-item-info" data-cardid="CB08BF719E6844C681BA32377BE720A9" data-amount="0">
+        <h3>原 {{$value.amount}} 元泰然E卡</h3>
+        <ul>
+            <li class="fl">￥{{$value.balance}}</li>
+            <li class="fr">已使用：￥<span class="useAmount">{{$value.amount - $value.balance}}</span></li>
+        </ul>
+        <p class="effective-decade">[泰然E卡] 有效期至 {{$value.validDate | dateFormat:'yyyy年MM月dd日 hh:mm:ss'}}</p>
+    </div>
+</div>
+{{/each}} 

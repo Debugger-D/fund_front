@@ -1,0 +1,87 @@
+.ljq-pagenav {
+    text-align: center;
+    margin-top: 16px;
+    ul{
+        display: inline-block;
+        li {
+            float: left;
+            list-style: none;
+            margin-right: 10px;
+            font-size: 12px;
+            .ljq-pagenav-text-link{
+                 color: $color-link-dark;
+                 font-size: 14px;
+            }
+            .ljq-pagenav-pagenum {
+                width: 28px;
+                height: 28px;
+                border-radius: 4px;
+                color: #444;
+                display: inline-block;
+                text-align: center;
+                line-height: 28px;
+                box-sizing: border-box;
+                position: relative;
+                top: -4px;
+                color: $color-link-dark;
+                border: 1px solid #e1e2e3;
+                &:hover {
+                    color: $color-link-dark;
+                    border: 1px solid $color-link-dark;
+                }
+
+            } 
+            .active {
+                border: none;
+                color: #515151;
+                &:hover {
+                    color: #515151;
+                    border: none;
+                }
+            }
+
+            .ljq-pagenav-c {
+                position: relative;
+                top: -4px;
+                margin-left: 40px;
+                margin-right: 30px;
+                .ljq-pagenav-input {
+                    width: 50px;
+                    height: 25px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: #444;
+                    font-family: inherit;
+                    font-size: 100%;
+                    outline: 0;
+                    border: 1px solid #ccc;
+                }
+                .ljq-pagenav-input-pageindex{
+                    margin-right: 0;
+                }
+            }
+
+            .ljq-pagenav-go {
+                position: relative;
+                top: -4px;
+            }
+
+            .ljq-pagenav-go, .ljq-pagenav-input {
+                width: 50px;
+                height: 25px;
+                line-height: 25px;
+                padding: 0px;
+                margin: 0px;
+                margin-right: 20px;
+                font-size: 14px;
+            }
+        }
+        .ljq-pagenav-total{
+            font-size: 14px;
+            span{
+                margin: 0 8px;
+            }
+        }
+    }
+
+}

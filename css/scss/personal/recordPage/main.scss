@@ -1,0 +1,158 @@
+#inputPwd{
+	p{
+		text-align: center;
+		margin: 8px 0;
+	}
+	input{
+		width: 80%;
+	    margin: 0 40px;
+	    display: block;
+	    height: 30px;
+	    line-height: 30px;
+	    padding: 0 20px;
+	    box-sizing: border-box;
+	}
+	.forget{
+		margin: 8px 40px;
+		float: right;
+	}
+}
+#zhzLayer{
+	padding: 25px 40px;
+	label{
+		color: #333;
+		margin-right: 10px;
+	}
+	input{
+		height: 30px;
+	    line-height: 30px;
+	    margin-right: 20px;
+	    padding: 0 10px;
+	}
+	span{
+		color: red;
+	}
+}
+.record-page {
+	
+	.textcenter{
+		th,td{
+			text-align: center;
+		}
+		
+	}
+	.dpno{
+		display: none;
+	}
+	.iconn {
+		display: inline-block;
+	    top: -18px;
+	    left: -13px;
+	}
+	.record-filter {
+		border-left: 1px solid $color-table-border;
+		border-right: 1px solid $color-table-border;
+		padding: 25px 30px;
+		font-size: 14px;
+		label{
+			font-weight: bold;
+			margin-right: 6px;
+			color: #4d4d4d;
+		}
+		&>div{
+			height: 44px;
+			line-height: 44px;
+			&>a,&>span{
+				display: inline-block;
+				width: 70px;
+				color: #666;
+				text-align: center;
+				font-size: 12px;
+				outline: none;
+			}
+			&>a:hover{
+				color: #e66e1e;
+			}
+			&>a.active{
+				color: #e66e1e;
+			}
+		}
+		.time{
+			color: #666;
+			&>label{
+				margin-right: 26px;
+			}
+			&>a{
+				width: 50px;
+			}
+			#today{
+				border-right: 1px solid #eee;
+				padding-right: 10px;
+			    height: 20px;
+			    line-height: 20px;
+			    margin-left: 30px;
+			}
+			.date_picker{
+				width: 120px;
+			    text-align: center;
+			    color: #666;
+			    border: 1px solid #ccc;
+			    height: 24px;
+			    line-height: 24px;
+			}
+		}
+		.type{
+			
+		}
+	}
+	.record-table {
+		a {
+			color: $color-link-dark;
+		}  
+		thead{
+			border-top: 1px solid #e1e1e1;
+		}
+		tbody{
+			position: relative;
+			z-index: 1;
+		}
+		.detail{
+			position: relative;
+			line-height: 20px;
+			z-index: 5;
+			&>a{
+				display: inline-block;
+				text-align: right;
+				i{
+					position: relative;
+    				top: -3px;
+				}
+			}
+			.float-op{
+				position: absolute;
+			    border: 1px solid #ccc;
+			    top: 14px;
+			    left: 10px;
+			    width: 90px;
+			    background: #fff;
+			    z-index: 100;
+				a{
+					line-height: 26px;
+					height: 26px;
+					color: #333;
+					display: block;
+					text-align: center;
+
+				}
+				a:hover{
+					background: #0ae;
+					color: #fff;
+				}
+			}
+		}
+	}
+	.ecard-op{
+		background: #0ae;
+		color: #fff;
+	}
+}
